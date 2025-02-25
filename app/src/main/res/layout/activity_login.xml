@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
+    android:background="#4B0082"
     android:padding="24dp">
 
     <!-- Judul Login -->
@@ -14,54 +15,68 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
-        android:textSize="24sp"
+        android:textSize="28sp"
+        android:textColor="@color/cardview_light_background"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Input Email -->
-    <EditText
-        android:id="@+id/etEmail"
+    <!-- CardView untuk Form Login -->
+    <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Enter Email"
-        android:inputType="textEmailAddress"
-        android:padding="12dp"
-        android:background="@android:drawable/editbox_background"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintTop_toBottomOf="@id/tvTitle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/black"
-        android:layout_marginTop="24dp" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <!-- Input Password -->
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Enter Password"
-        android:inputType="textPassword"
-        android:padding="12dp"
-        android:background="@android:drawable/editbox_background"
-        app:layout_constraintTop_toBottomOf="@id/etEmail"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/black"
-        android:layout_marginTop="16dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#2A004E"
+            android:padding="20dp">
 
-    <!-- Tombol Login -->
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:backgroundTint="@color/black"
-        android:textColor="@android:color/white"
-        android:padding="12dp"
-        app:layout_constraintTop_toBottomOf="@id/etPassword"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp" />
+            <!-- Input Email -->
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Email"
+                android:textColorHint="#441752"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:background="@android:drawable/editbox_background"
+                android:textColor="@color/black" />
+
+            <!-- Input Password -->
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Password"
+                android:inputType="textPassword"
+                android:textColorHint="#441752"
+                android:padding="12dp"
+                android:background="@android:drawable/editbox_background"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp" />
+
+            <!-- Tombol Login -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:backgroundTint="#800080"
+                android:textColor="@android:color/white"
+                android:padding="12dp"
+                android:layout_marginTop="16dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
