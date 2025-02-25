@@ -1,6 +1,6 @@
 package com.example.login
 
-import com.example.loginhomepage.databinding.ActivityMainBinding
+import com.example.login.databinding.ActivityMainBinding
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         // Get Email from LoginActivity
         val userEmail = intent.getStringExtra("USER_EMAIL")
-        binding.tvUserEmail.text = "Logged in as: $userEmail"
+        binding.tvUserEmail.text = "Login Sebagai: $userEmail"
 
         // Log email to LogCat
         Log.d("MainActivity", "User Email: $userEmail")

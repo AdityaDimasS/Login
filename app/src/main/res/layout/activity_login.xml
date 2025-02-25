@@ -32,6 +32,7 @@
         app:layout_constraintTop_toBottomOf="@id/tvTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/black"
         android:layout_marginTop="24dp" />
 
     <!-- Input Password -->
@@ -46,6 +47,7 @@
         app:layout_constraintTop_toBottomOf="@id/etEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/black"
         android:layout_marginTop="16dp" />
 
     <!-- Tombol Login -->
